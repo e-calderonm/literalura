@@ -1,4 +1,5 @@
 package com.alura.literalura;
+
 import com.alura.literalura.library.Library;
 import com.alura.literalura.repository.AuthorRepository;
 import com.alura.literalura.repository.BookRepository;
@@ -23,8 +24,8 @@ public class LiteraluraApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Library libreria = new Library(libroRepository, autorRepository);
-		Menu menu = new Menu(libreria);
+		Library library = new Library(libroRepository, autorRepository);
+		Menu menu = new Menu(library);
 		menu.showMenu();
 
 	}

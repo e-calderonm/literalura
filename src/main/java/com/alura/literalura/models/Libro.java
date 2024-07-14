@@ -1,4 +1,5 @@
 package com.alura.literalura.models;
+
 import com.alura.literalura.data.Genres;
 import com.alura.literalura.models.records.DataBook;
 import com.alura.literalura.models.records.Media;
@@ -19,9 +20,8 @@ public class Libro {
     @Column(unique = true)
     private String titulo;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL) // Asegura que el autor se guarde automáticamente
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "autor_id")
-    //@Transient
     private Author autor;
     @Enumerated(EnumType.STRING)
     private Genres genero;
@@ -35,11 +35,10 @@ public class Libro {
     public Libro(DataBook datosLibro) {
         this.libroId = datosLibro.libroId();
         this.titulo = datosLibro.titulo();
-        // Si autor es una lista de autores (como parece en tu registro DatosLibro)
         if (datosLibro.autor() != null && !datosLibro.autor().isEmpty()) {
-            this.autor = new Author(datosLibro.autor().get(0)); // Toma el primer autor de la lista
+            this.autor = new Author(datosLibro.autor().get(0));
         } else {
-            this.autor = null; // o maneja el caso de que no haya autor
+            this.autor = null;
         }
         this.genero =  generoModificado(datosLibro.genero());
         this.idioma = idiomaModificado(datosLibro.idioma());
@@ -81,19 +80,15 @@ public class Libro {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public Genres getGenero() {
         return genero;
     }
-
     public void setGenero(Genres genero) {
         this.genero = genero;
     }
-
     public String getImagen() {
         return imagen;
     }
@@ -101,27 +96,21 @@ public class Libro {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-
     public Long getLibroId() {
         return libroId;
     }
-
     public void setLibroId(Long libroId) {
         this.libroId = libroId;
     }
-
     public String getTitulo() {
         return titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-
     public Author getAutores() {
         return autor;
     }
-
     public void setAutores(Author autores) {
         this.autor = autores;
     }
@@ -130,7 +119,6 @@ public class Libro {
     public String getIdioma() {
         return idioma;
     }
-
     public void setIdioma(String idioma) {
         this.idioma = idioma;
     }

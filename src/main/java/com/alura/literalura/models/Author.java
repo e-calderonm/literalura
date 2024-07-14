@@ -1,4 +1,5 @@
 package com.alura.literalura.models;
+
 import com.alura.literalura.models.records.AuthorR;
 import jakarta.persistence.*;
 import java.util.List;
@@ -28,23 +29,18 @@ public class Author {
     public Long getId() {
         return id;
     }
-
     public String getNombre() {
         return nombre;
     }
-
     public Integer getCumpleanios() {
         return cumpleanios;
     }
-
     public Integer getFechaFallecimiento() {
         return fechaFallecimiento;
     }
-
     public List<Libro> getLibros() {
         return libros;
     }
-
     public void setLibros(List<Libro> libros) {
         this.libros = libros;
     }

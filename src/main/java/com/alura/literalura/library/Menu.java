@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private Scanner sc = new Scanner(System.in);
-    private Library library;
+    private final Scanner sc = new Scanner(System.in);
+    private final Library library;
 
     public Menu(Library library) {
         this.library = library;
@@ -16,16 +16,17 @@ public class Menu {
         var opcion = -1;
         while (opcion != 0) {
             String menu =
-                    "       LiterAlura\n" +
-                            "      By: Daniel C\n" +
-                            "Elija la opción a través de su número:\n" +
-                            "1- buscar libros por título\n" +
-                            "2- listar libros registrados\n" +
-                            "3- listar autores registrados\n" +
-                            "4- listar autores vivos en un determinado año\n" +
-                            "5- listar libros por idioma\n" +
-                            "0- salir\n" +
-                            "Ingrese una opción: ";
+                    """
+                                   LiterAlura
+                                  By: Daniel C
+                            Elija la opción a través de su número:
+                            1- buscar libros por título
+                            2- listar libros registrados
+                            3- listar autores registrados
+                            4- listar autores vivos en un determinado año
+                            5- listar libros por idioma
+                            0- salir
+                            Ingrese una opción:\s""";
 
             try {
                 System.out.println(menu);

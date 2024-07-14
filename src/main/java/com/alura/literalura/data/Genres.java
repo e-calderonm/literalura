@@ -10,7 +10,7 @@ public enum Genres {
     FICCION ("Fiction"),
     ROMANCE ("Romance") ;
 
-    private String genre;
+    private final String genre;
 
     Genres(String genreGutendex) {
         this.genre = genreGutendex;
