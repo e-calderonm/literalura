@@ -40,7 +40,7 @@ Este proyecto es una aplicación Java que interactúa con la API Gutendex para b
    - Al ejecutar, la aplicación mostrará un menú con varias opciones.
    - Elige una opción ingresando el número correspondiente y sigue las indicaciones.
 
-![demo1](https://drive.google.com/file/d/1gsmCVsbffV7WgF5yB8DlYiYDH33nsdOE/view?usp=sharing)
-![demo2](https://drive.google.com/file/d/1yL3gw0Zgayx8xCfgvYHZs9Znv-HGA_33/view?usp=sharing)  
+![demo1](https://drive.google.com/uc?id=1gsmCVsbffV7WgF5yB8DlYiYDH33nsdOE)
+![demo2](https://drive.google.com/uc?id=1yL3gw0Zgayx8xCfgvYHZs9Znv-HGA_33)
 
 
